@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <title>Lissajous Ellipses</title>
+   <meta charset="utf-8" />
+   <link href="SkewAnim1.css" rel="stylesheet" type="text/css">
+   <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+   <style>
+     #outer {
+       position: absolute;
+       width: 90%; height: 90%;
+       border: solid 2px #000;
+     }
+    </style>
+  </head>
+
+  <body>
+    <div id="outer"> </div>
+
+    <script>
+      var fillColor  = "rgb(255, 0, 0)";
+      var basePointX = 300, basePointY = 220;
+      var majorAxis = 40, minorAxis = 80;
+      var currentX  = 0, currentY = 0;
+      var deltaAngle = 3, maxAngle = 720;
+      var Constant = 0.25, newNode;
+      var A = 200.0, B = 2.0, C = 100.0, D = 5.0;
+      var offsetX = 0, offsetY = 0;
+      var rVal = 0, gVal = 0, bVal = 0; 
+      var stripCount = 10, currStrip = 0, factor = 0.5;
+      var stripWidth = Math.floor(maxAngle/stripCount);
+ 
+      $(document).ready(function() {
+         for(var angle=0; angle<maxAngle; angle+=deltaAngle) {
+            offsetX  = A*Math.sin(B*angle*Math.PI/180);
+            offsetY  = C*Math.cos(D*angle*Math.PI/180);
+
+            currentX = basePointX+offsetX;
+            currentY = basePointY-offsetY;
+      
+            currStrip = Math.floor(angle/stripWidth);
+            if(currStrip % 2 == 0) {
+              factor = 1.0;
+            } else {
+              factor = 0.5;
+            }
+
+            rVal = 0; gVal = 0; bVal = 0; 
+            currStrip = Math.floor(angle/stripWidth);
+
+            if(currStrip % 3 == 0) {
+              rVal = Math.floor(255*(angle%stripWidth)/stripWidth);
+            } if(currStrip % 3 == 1) {
+              rVal = Math.floor(255*(angle%stripWidth)/stripWidth);
+              gVal = Math.floor(255*(angle%stripWidth)/stripWidth);
+            } 
+            else {
+              bVal = Math.floor(255*(angle%stripWidth)/stripWidth);
+            } 
+
+            fillColor  = "rgb("+rVal+","+gVal+","+bVal+")";
+ 
+            if(angle % (stripWidth/2) < 5 ) {
+              fillColor  = "#ff0";
+            }
+ 
+            if(angle % (stripWidth/4) < 5 ) {
+              fillColor  = "#ff0";
+            }
+ 
+            // create an ellipse at the current position
+            newNode = $('<div>').css({'position':'absolute',
+                                      'width':(factor*majorAxis)+'px',
+                                      'height':(factor*minorAxis)+'px',
+                                       left: currentX+'px',
+                                       top: currentY+'px',
+                                       'backgroundColor': fillColor,
+                                       'borderRadius': '50%'
+                                     }). 
+                                    addClass("skewAnim1"); 
+ 
+            if(Math.floor(angle/deltaAngle) % 16 == 0) {
+               $(newNode).addClass("skewAnim9");
+            } 
+ 
+            $("#outer").append(newNode);
+ 
+            // create an ellipse at the current position
+            newNode = $('<div>').css({'position':'absolute',
+                                      'width':majorAxis+'px',
+                                      'height':minorAxis+'px',
+                                       left: (currentX+majorAxis)+'px',
+                                       top: currentY+'px',
+                                       'backgroundColor': fillColor,
+                                       'borderRadius': '50%'
+                                     }); 
+ 
+            $("#outer").append(newNode);
+         }
+      });
+    </script>
+  </body>
+</html>

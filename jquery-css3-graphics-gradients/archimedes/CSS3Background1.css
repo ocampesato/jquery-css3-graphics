@@ -1,0 +1,28 @@
+#myCanvas {
+  opacity: 0.8;
+  position: relative; top: 0px; left: 0px;
+
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%,
+                                     from(#f00),
+                                     color-stop(0.4, yellow),
+                                     to(#00f));
+
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow:  30px 30px 30px #000;
+}
+  
+#myCanvas:hover {
+  background-image:
+   -webkit-radial-gradient(red 4px, transparent 48px), 
+   -webkit-repeating-linear-gradient(0deg, red 5px,  green 4px, 
+                                     yellow 8px, blue 12px, 
+                                     transparent 16px, red 20px, 
+                                     blue 24px, transparent 28px, 
+                                     transparent 32px),
+   -webkit-radial-gradient(blue 8px, transparent 68px);
+ 
+  background-size: 120px 120px, 24px 24px; 
+  background-position: 0 0;
+}
+

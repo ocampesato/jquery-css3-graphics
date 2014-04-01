@@ -1,0 +1,340 @@
+
+     .linear1 {
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%,
+                                     from(#f00),
+                                     color-stop(0.4, yellow),
+                                     to(#00f));
+
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow:  30px 30px 30px #000;
+     }
+
+     .linear2 {
+  background-image:
+   -webkit-radial-gradient(red 4px, transparent 48px),
+   -webkit-repeating-linear-gradient(0deg, red 5px,  green 4px,
+                                     yellow 8px, blue 12px,
+                                     transparent 16px, red 20px,
+                                     blue 24px, transparent 28px,
+                                     transparent 32px),
+   -webkit-radial-gradient(blue 8px, transparent 68px);
+  border-radius: 4px;
+  -webkit-box-shadow:  10px 10px 10px #000;
+  //background-size: 320px 320px, 124px 124px;
+     }
+
+     .radial1 {
+background-color:white;
+background-image:                    
+  -webkit-radial-gradient(yellow 4px, transparent 24px), 
+  -webkit-repeating-radial-gradient(red 1px,  yellow 4px, red 8px, blue 12px,
+                                    transparent 26px, red 20px, blue 24px,
+                                    transparent 28px, transparent 32px);
+background-size: 30px 30px, 50px 50px;
+-webkit-box-shadow:  30px 30px 30px #000;
+     }
+
+     .radial2 {
+background-color:white;
+background-image:
+  -webkit-radial-gradient(red 18px, transparent 36px), 
+  -webkit-repeating-radial-gradient(red 0px,  green 4px, yellow 8px, blue 12px,
+                                    transparent 28px, green 20px, red 24px,
+                                    transparent 28px, transparent 12px),
+  -webkit-repeating-radial-gradient(red 0px,  green 4px, yellow 8px, blue 12px,
+                                    transparent 28px, green 20px, red 24px,
+                                    transparent 28px, transparent 12px);
+background-size: 50px 60px, 70px 80px;
+-webkit-box-shadow:  10px 10px 10px #000;
+
+resize:both;
+overflow:auto;
+}
+
+.radial3 {
+background-color:white;
+background-image:                    
+  -webkit-radial-gradient(red 4px, transparent 48px), 
+  -webkit-repeating-radial-gradient(red 2px,  green 4px, yellow 8px, blue 12px,
+                                    transparent 16px, red 20px, blue 24px,
+                                    transparent 28px, transparent 32px);
+background-size: 120px 120px, 4px 4px;
+-webkit-box-shadow:  10px 10px 10px #000;
+-webkit-box-shadow:  30px 30px 30px #000;
+}
+
+.radial4 {
+background-color:white;
+background-image:
+  -webkit-radial-gradient(red 4px, transparent 18px),
+  -webkit-repeating-radial-gradient(red 0px,  green 4px, yellow 8px, blue 12px,
+                                    transparent 28px, green 20px, red 24px,
+                                    transparent 28px, transparent 32px),
+  -webkit-repeating-radial-gradient(red 0px,  green 4px, yellow 8px, blue 12px,
+                                    transparent 28px, green 20px, red 24px,
+                                    transparent 28px, transparent 32px);
+background-size: 50px 60px, 70px 80px;
+-webkit-box-shadow:  30px 30px 30px #000;
+
+resize:both;
+overflow:auto;
+}
+
+.radial5 {
+background-color:white;
+background-image:
+  -webkit-radial-gradient(yellow 4px, transparent 24px),
+  -webkit-repeating-radial-gradient(red 1px,  yellow 4px, red 8px, blue 12px, 
+                                    transparent 26px, red 20px, blue 24px, 
+                                    transparent 28px, transparent 32px),
+  -webkit-repeating-radial-gradient(red 1px,  yellow 4px, red 8px, blue 12px, 
+                                    transparent 26px, red 20px, blue 24px, 
+                                    transparent 28px, transparent 32px);
+background-size: 30px 30px, 50px 50px;
+-webkit-box-shadow:  30px 30px 30px #000;
+}
+
+.radial6 {
+background-color:white;
+background-image:
+  -webkit-radial-gradient(red 4px, transparent 18px),
+  -webkit-repeating-linear-gradient(45deg, red 0px,  green 4px, yellow 8px, blue 12px,
+                                    transparent 28px, green 20px, red 24px,
+                                    transparent 28px, transparent 32px),
+  -webkit-repeating-linear-gradient(-45deg, red 0px,  green 4px, yellow 8px, blue 12px,
+                                    transparent 28px, green 20px, red 24px,
+                                    transparent 28px, transparent 32px);
+background-size: 50px 60px, 70px 80px;
+background-position: 0 0;
+-webkit-box-shadow:  30px 30px 30px #000;
+
+resize:both;
+overflow:auto;
+}
+
+.radial7:hover { 
+background-color:white;
+background-image:
+  -webkit-radial-gradient(red 4px, transparent 28px),
+  -webkit-repeating-linear-gradient(45deg, red 0px,  yellow 4px, green 8px, red 12px,
+                                    transparent 26px, blue 20px, red 24px,
+                                    transparent 28px, blue 12px),
+  -webkit-repeating-linear-gradient(-45deg, red 0px,  yellow 4px, green 8px, red 12px,
+                                    transparent 26px, blue 20px, red 24px,
+                                    transparent 28px, blue 12px);
+-webkit-transform : skew(60deg, -20deg) scale(2, 1) rotate(-60deg);
+background-size: 100px 40px, 40px 100px;
+-webkit-border-radius: 4px;
+border-radius: 4px;
+-webkit-box-shadow:  30px 30px 30px #000;
+resize:both;
+overflow:auto;
+}
+
+.radial8 { 
+background-color:white;
+background-image:
+  -webkit-radial-gradient(red 4px, transparent 18px),
+  -webkit-repeating-linear-gradient(45deg, red 0px,  green 4px, yellow 8px, blue 12px,
+                                    transparent 28px, green 20px, red 24px,
+                                    transparent 28px, transparent 32px),
+  -webkit-repeating-linear-gradient(-45deg, red 0px,  green 4px, yellow 8px, blue 12px,
+                                    transparent 28px, green 20px, red 24px,
+                                    transparent 28px, transparent 32px);
+background-size: 50px 60px, 70px 80px;
+-webkit-box-shadow:  30px 30px 30px #000;
+
+8esize:both;
+overflow:auto;
+}
+
+.radial8:hover {
+background-color:white;
+background-image:
+  -webkit-radial-gradient(red 4px, transparent 28px),
+  -webkit-repeating-linear-gradient(45deg, red 0px,  yellow 4px, green 8px, red 12px,
+                                    transparent 26px, blue 20px, red 24px,
+                                    transparent 28px, blue 12px),
+  -webkit-repeating-linear-gradient(-45deg, red 0px,  yellow 4px, green 8px, red 12px,
+                                    transparent 26px, blue 20px, red 24px,
+                                    transparent 28px, blue 12px);
+-webkit-transform : skew(60deg, -20deg) scale(2, 1) rotate(-60deg);
+background-size: 100px 40px, 40px 100px;
+
+-webkit-border-radius: 4px;
+border-radius: 4px;
+resize:both;
+overflow:auto;
+}
+
+.radial9 { 
+background-color:white;
+background-image:
+  -webkit-radial-gradient(red 18px, transparent 36px), 
+  -webkit-repeating-linear-gradient(45deg, black 2px,  green 4px, yellow 8px, blue 12px,
+                                    transparent 28px, green 20px, red 24px,
+                                    transparent 28px, transparent 12px),
+  -webkit-repeating-linear-gradient(-45deg, black 2px,  green 4px, yellow 8px, blue 12px,
+                                    transparent 28px, green 20px, red 24px,
+                                    transparent 28px, transparent 12px);
+-webkit-box-shadow:  30px 30px 30px #000;
+resize:both;
+overflow:auto;
+}
+
+.radial9:hover {
+background-color:white;
+background-image:
+  -webkit-radial-gradient(white 2px, transparent 8px),
+  -webkit-repeating-linear-gradient(45deg, white 2px, yellow 8px, green 4px, red 12px,
+                                    transparent 26px, blue 20px, red 24px,
+                                    transparent 28px, blue 12px), 
+  -webkit-repeating-linear-gradient(-45deg, white 2px, yellow 8px, green 4px, red 12px,
+                                    transparent 26px, blue 20px, red 24px,
+                                    transparent 28px, blue 12px);
+-webkit-transform : skew(60deg, -20deg) scale(2, 1) rotate(-60deg);
+background-size: 100px 30px, 30px 100px;
+background-position: 0 0;
+
+-webkit-border-radius: 4px;
+border-radius: 4px;
+resize:both;
+overflow:auto;
+}
+
+.radial10 { 
+background-color:white;
+background-image:
+  -webkit-radial-gradient(red 4px, transparent 48px), 
+  -webkit-repeating-linear-gradient(45deg, red 2px,  green 4px, yellow 8px, blue 12px,
+                                    transparent 16px, red 20px, blue 24px, 
+                                    transparent 28px, transparent 32px),
+  -webkit-repeating-linear-gradient(-45deg, red 2px,  green 4px, yellow 8px, blue 12px,
+                                    transparent 16px, red 20px, blue 24px,
+                                    transparent 28px, transparent 32px),
+  -webkit-radial-gradient(blue 8px, transparent 68px);
+
+background-size: 120px 120px, 4px 4px;
+-webkit-box-shadow:  30px 30px 30px #000;
+}
+
+.radial10:hover {
+background-color:white;
+background-image:
+  -webkit-radial-gradient(red 4px, transparent 48px), 
+  -webkit-repeating-linear-gradient(45deg, red 5px,  green 4px, yellow 8px, blue 12px,
+                                    transparent 16px, red 20px, blue 24px,
+                                    transparent 28px, transparent 32px), 
+  -webkit-repeating-linear-gradient(-45deg, red 5px,  green 4px, yellow 8px, blue 12px,
+                                    transparent 16px, red 20px, blue 24px,
+                                    transparent 28px, transparent 32px),
+  -webkit-radial-gradient(blue 8px, transparent 68px);
+-webkit-transform : skew(-70deg, 30deg) scale(3, 1) rotate(40deg);
+
+background-size: 120px 120px, 4px 4px;
+background-position: 0 0;
+}
+
+.radial11 { 
+background-color:white;
+background-image:
+  -webkit-radial-gradient(red 4px, transparent 48px), 
+  -webkit-repeating-linear-gradient(45deg, red 5px,  green 4px, yellow 8px, blue 12px,
+                                    transparent 16px, red 20px, blue 24px, 
+                                    transparent 28px, transparent 32px),
+  -webkit-repeating-linear-gradient(-45deg, red 5px,  green 4px, yellow 8px, blue 12px,
+                                    transparent 16px, red 20px, blue 24px,
+                                    transparent 28px, transparent 32px),
+  -webkit-radial-gradient(blue 8px, transparent 68px);
+
+background-size: 120px 120px, 24px 24px;
+-webkit-box-shadow:  30px 30px 30px #000;
+}
+
+.radial11:hover {
+background-color:white;
+background-image:
+  -webkit-radial-gradient(red 3px, transparent 1px),  
+  -webkit-repeating-linear-gradient(45deg, red 7px,  green 4px, yellow 1px, blue 3px, 
+                                    transparent 8px, yellow 12px, red 14px,
+                                    transparent 28px, transparent 18px), 
+  -webkit-repeating-linear-gradient(-45deg, red 7px,  green 4px, yellow 1px, blue 3px, 
+                                    transparent 8px, yellow 12px, red 14px,
+                                    transparent 28px, transparent 18px),
+  -webkit-radial-gradient(blue 8px, transparent 10px);
+-webkit-transform : skew(-70deg, 30deg) scale(3, 1) rotate(40deg);
+background-size: 60px 60px, 20px 20px;
+background-position: 0 0;
+
+resize:both;
+overflow:auto;
+}
+
+/* VERY GOOD: radial12/radial12:hover */
+/* VERY GOOD: radial13/radial13:hover */
+
+
+.radial12 { 
+background-color:white;
+background-image:
+  -webkit-radial-gradient(red 4px, transparent 24px), 
+  -webkit-repeating-radial-gradient(red 1px,  green 4px, yellow 8px, blue 12px,  
+                                    transparent 16px, red 20px, blue 24px, 
+                                    transparent 28px, transparent 32px);
+background-size: 30px 30px, 40px 40px; 
+-webkit-box-shadow:  30px 30px 30px #000;
+} 
+
+.radial12:hover {
+background-color:white;
+background-image:
+  -webkit-radial-gradient(red 4px, transparent 18px),
+  -webkit-repeating-radial-gradient(red 0px,  green 4px, yellow 8px, blue 12px,
+                                    transparent 28px, green 20px, red 24px,
+                                    transparent 28px, transparent 32px);
+-webkit-transform : skew(-70deg, 30deg) scale(3, 1) rotate(40deg);
+background-size: 50px 60px, 70px 80px;
+  
+resize:both;                        
+overflow:auto;                      
+} 
+
+.radial13 {
+background-color:white;
+background-image:
+  -webkit-radial-gradient(red 4px, transparent 48px), 
+  -webkit-repeating-linear-gradient(25deg, yellow 2px,  green 4px, yellow 8px, blue 12px,
+                                    transparent 16px, blue 20px, red 24px, 
+                                    transparent 28px, transparent 32px),
+  -webkit-repeating-linear-gradient(-25deg, yellow 2px,  green 4px, yellow 8px, blue 12px,
+                                    transparent 16px, blue 20px, red 24px,
+                                    transparent 28px, transparent 32px),
+  -webkit-radial-gradient(blue 8px, transparent 68px);
+  -webkit-transform : skew(60deg, -20deg) scale(2, 1); 
+
+background-size: 240px 240px, 380px 380px;
+-webkit-box-shadow:  1px 1px 1px #000;
+}
+
+.radial13:hover {
+background-color:white;             
+background-image:
+  -webkit-radial-gradient(blue 8px, red 20px, transparent 2px),
+  -webkit-repeating-linear-gradient(45deg, red 3px,  yellow 5px, green 8px, red 12px,
+                                    transparent 16px, blue 20px, red 24px,
+                                    transparent 18px, blue 12px),
+  -webkit-repeating-linear-gradient(-45deg, red 3px,  yellow 4px, green 8px, red 12px,
+                                    transparent 16px, blue 20px, red 24px,
+                                    transparent 18px, blue 12px),
+  -webkit-radial-gradient(black 28px, transparent 18px); 
+-webkit-transform : skew(-70deg, 30deg) scale(3, 1) rotate(40deg);
+background-size: 240px 240px, 80px 80px;
+background-size: 50px 20px, 30px 50px; 
+
+-webkit-border-radius: 0px;
+border-radius: 0px;
+resize:both;
+overflow:auto;
+}
+

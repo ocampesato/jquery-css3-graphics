@@ -1,0 +1,290 @@
+
+@-webkit-keyframes glow {
+  0% {
+    -webkit-box-shadow: 0 0 24px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    -webkit-box-shadow: 0 0 24px rgba(255, 0, 0, 0.9);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 24px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.skewAnim1 {
+  -webkit-transform : skew(60deg, -20deg) scale(0.75, 1.75) rotate(-60deg);
+  -transform : skew(60deg, -20deg) scale(0.75, 1.75) rotate(-60deg);
+  -webkit-box-shadow: 8px 8px 8px #f00;
+  box-shadow: 8px 8px 8px #f00;
+  -webkit-animation-name: animCube1;
+  -webkit-animation-duration: 10s;
+}
+
+.skewAnim2 {
+  -webkit-transform : skew(-60deg, 50deg) scale(1.5, 0.75) rotate(140deg);
+  transform : skew(-60deg, 50deg) scale(1.5, 0.75) rotate(140deg);
+  -webkit-box-shadow: 8px 8px 8px #f00;
+  box-shadow: 8px 8px 8px #f00;
+  -webkit-animation-name: animCube1;
+  -webkit-animation-duration: 10s;
+}
+
+.skewAnim3 {
+  -webkit-transform : skew(-60deg, 150deg) scale(1.5, 0.75) rotate(210deg);
+  transform : skew(-60deg, 150deg) scale(1.5, 0.75) rotate(210deg);
+  -webkit-box-shadow: 8px 8px 8px #880;
+  box-shadow: 8px 8px 8px #880;
+  -webkit-animation-name: animCube1;
+  -webkit-animation-duration: 10s;
+}
+
+.skewAnim4 {
+  -webkit-transform : skew(-60deg, 150deg) scale(1.5, 0.75) rotate(210deg);
+  transform : skew(-60deg, 150deg) scale(1.5, 0.75) rotate(210deg);
+  -webkit-box-shadow: 8px 8px 8px #880;
+  box-shadow: 8px 8px 8px #880;
+  -webkit-animation-name: animCube1;
+  -webkit-animation-duration: 4s;
+
+top:-5px;
+background:rgb(40,40,40);
+background:rgba(0,0,0,.5);
+color:rgba(255,255,255,1);
+border-bottom:1px solid #334455;
+-webkit-box-shadow:0px 5px 0px #122121, 0px 6px 0px #556677, 0px 14px 5px #447755; !important;
+box-shadow:0px 5px 0px #122121, 0px 6px 0px #556677, 0px 14px 5px #447755; !important;
+}
+
+.skewAnim5 {
+  top:-25px;
+  left:-150px;
+  background:rgb(33,.33,.33);
+  background:rgba(0,0,0,.4);
+  color:rgba(255,255,255,1);
+  border-right:20px solid #0000f8;
+  -webkit-transform : skew(-210deg, 210deg) scale(1.5, 1.75) rotate(300deg);
+  transform : skew(-210deg, 210deg) scale(1.5, 1.75) rotate(300deg);
+  -webkit-box-shadow: 18px 18px 18px #300;
+  box-shadow: 18px 18px 18px #300;
+  -webkit-animation-name: animCube1;
+  -webkit-animation-duration: 12s;
+  resize:both;
+  overflow:auto;
+}
+
+.skewAnim6 {
+  top:-25px;
+  left:-150px;
+  background:rgb(33,.33,.33);
+  background:rgba(0,0,0,.4);
+  color:rgba(255,255,255,1);
+  border-left:24px solid #ffcc00;
+  border-right:24px solid #00f800;
+  border-top:24px solid #f80000;
+  border-bottom:24px solid #000066;
+  -webkit-transform : skew(-210deg, 210deg) scale(1.5, 1.75) rotate(300deg);
+  transform : skew(-210deg, 210deg) scale(1.5, 1.75) rotate(300deg);
+  -webkit-box-shadow: 18px 18px 18px #300;
+  box-shadow: 18px 18px 18px #300;
+  -webkit-animation-name: animCube1;
+  -webkit-animation-duration: 12s;
+  resize:both;
+  overflow:auto;
+}
+
+.skewAnim7 {
+  top:-25px;
+  left:-150px;
+  background:rgb(33,.33,.33);
+  background:rgba(0,0,0,.4);
+  color:rgba(255,255,255,1);
+  border-bottom:8px solid #000066;
+  border-left:20px dotted #cc0000;
+  border-right:20px solid #0000f8;
+  -webkit-transform : skew(-210deg, 210deg) scale(1.5, 1.75) rotate3d(50px, 50px, 50px, -90deg);
+  transform : skew(-210deg, 210deg) scale(1.5, 1.75) rotate3d(50px, 50px, 50px, -20deg);
+  -webkit-box-shadow: 18px 18px 18px #300;
+  box-shadow: 18px 18px 18px #300;
+  -webkit-animation-name: animCube1;
+  -webkit-animation-duration: 12s;
+  resize:both;
+  overflow:auto;
+}
+
+.skewAnim8 {
+  width:300px;
+  height:300px;
+  top:-100px;
+  left:-150px;
+  background:rgb(1,.33,.33);
+  background:rgba(1,0,0,.4);
+  color:rgba(255,255,255,1);
+  color:rgba(0,0,255,1);
+  border-top:8px dashed #000066;
+  border-bottom:8px dashed #000066;
+  border-left:20px solid #cc0000;
+  border-right:20px solid #0000f8;
+  -webkit-transform : skew(-210deg, 210deg) scale(1.5, 1.75) rotate3d(50px, 50px, 50px, -90deg);
+  transform : skew(-210deg, 210deg) scale(1.5, 1.75) rotate3d(50px, 50px, 50px, -20deg);
+  -webkit-box-shadow: 18px 18px 18px #300;
+  box-shadow: 18px 18px 18px #300;
+  -webkit-animation-name: animCube1;
+  -webkit-animation-duration: 12s;
+  overflow:auto;
+}
+
+.skewAnim9 {
+  width:300px;
+  height:300px;
+  top:-100px;
+  left:-150px;
+  background:rgb(1,.33,.33);
+  background:rgba(1,0,0,.4);
+  color:rgba(255,255,255,1);
+  color:rgba(0,0,255,1);
+  border-top:8px dashed #000066;
+  border-bottom:8px dashed #000066;
+  border-left:20px solid #cc0000;
+  border-right:20px solid #0000f8;
+  -webkit-box-shadow: 18px 18px 18px #300;
+  box-shadow: 18px 18px 18px #300;
+  margin: 4px 2px 4px 6px;
+  padding: 4px 2px 4px 6px;
+  border-style: double;
+  -webkit-perspective: 400;
+  -webkit-perspective-origin: 20% 25%;
+
+  -webkit-transform : skew(-210deg, 210deg) scale(1.5, 1.75) rotate3d(50px, 50px, 50px, -90deg);
+  transform : skew(-210deg, 210deg) scale(1.5, 1.75) rotate3d(50px, 50px, 50px, -20deg);
+  -webkit-animation-name: animCube1;
+  -webkit-animation-duration: 12s;
+}
+
+.skewAnim10 {
+  width:200px;
+  height:200px;
+  top:-100px;
+  left:-150px;
+  background:rgb(1,.33,.33);
+  background:rgba(1,0,0,.4);
+  color:rgba(255,255,255,1);
+  color:rgba(0,0,255,1);
+  border-top:8px dashed #000066;
+  border-bottom:8px dashed #000066;
+  border-left:20px solid #cc0000;
+  border-right:20px solid #0000f8;
+  -webkit-box-shadow: 18px 18px 18px #300;
+  box-shadow: 18px 18px 18px #300;
+  margin: 4px 2px 4px 6px;
+  padding: 4px 2px 4px 6px;
+  clip: rect(0px,150px,200px,100px);
+  background-clip: content-box;
+  border-top-style: groove;
+
+  -webkit-transform : skew(-210deg, 210deg) scale(1.5, 1.75) rotate3d(50px, 50px, 50px, -90deg);
+  transform : skew(-210deg, 210deg) scale(1.5, 1.75) rotate3d(50px, 50px, 50px, -20deg);
+  -webkit-animation-name: animCube1;
+  -webkit-animation-duration: 12s;
+}
+
+.skewAnim11 {
+  width:300px;
+  height:300px;
+  top:-100px;
+  left:-150px;
+  background:rgb(1,.33,.33);
+  background:rgba(1,0,0,.4);
+  color:rgba(255,255,255,1);
+  color:rgba(0,0,255,1);
+  border-top:8px dashed #000066;
+  border-bottom:8px dashed #000066;
+  border-left:20px solid #cc0000;
+  border-right:20px solid #0000f8;
+  -webkit-box-shadow: 18px 18px 18px #300;
+  box-shadow: 18px 18px 18px #300;
+  outline: #FFFF00 dotted thin;
+  margin: 4px 2px 4px 6px;
+  padding: 4px 2px 4px 6px;
+  border-style: double;
+  -webkit-perspective: 400;
+  -webkit-perspective-origin: 20% 25%;
+
+  -webkit-transform : skew(-210deg, 210deg) scale(0.5, 1.25) rotate3d(50px, 50px, 50px, -90deg);
+  transform : skew(-210deg, 210deg) scale(0.5, 1.25) rotate3d(50px, 50px, 50px, -20deg);
+  -webkit-animation-name: animCube1;
+  -webkit-animation-duration: 6s;
+}
+
+@-webkit-keyframes animCube1 {
+   0% {
+      -webkit-transform: matrix(1.5, 0.5,  0.0, 1.5, 0, 0) 
+                         matrix(1.0, 0.0,  1.0, 1.0, 0, 0);
+   }
+   10% {
+      -webkit-transform: translate3d(50px,50px,50px) rotate3d(50px,50px,50px,-90deg) skew(-15deg,0) scale3d(1.25, 1.25, 1.25);
+   }
+   20% {
+      -webkit-transform: matrix(1.0, 1.5, -0.5, 1.0, 0, 0) 
+                         matrix(0.5, 0.5,  0.5, 0.5, 0, 0);
+   }
+   25% {
+      -webkit-transform: matrix(0.4, 0.5,  0.5, 0.3, 250, 50) 
+                         matrix(0.3, 0.5, -0.5, 0.4, 50, 150);
+   }
+   30% {
+      -webkit-transform: perspective(200px) rotate3d(50px,50px,50px,-180deg) skew(105deg,0) scale3d(1.25, 1.25, 1.25);
+   }
+   40% {
+      -webkit-transform: matrix(1.5, 0.0,  0.5, 0.5, 0, 0) 
+                         matrix(1.0, 1.5, -0.5, 1.0, 0, 0);
+   }
+   45% {
+      -webkit-transform: matrix(0.2, 0.3,  0.4, 0.4, 250, 50) 
+                         matrix(0.5, 0.3, -0.4, 0.2, 50, 250);
+   }
+   50% {
+      -webkit-transform: translate3d(250px,250px,250px) rotate3d(250px,250px,250px,-120deg) skew(-65deg,0) scale3d(0.5, 0.5, 0.5);
+   }
+   55% {
+      -webkit-transform: matrix(0.4, 0.5,  0.5, 0.3, 250, 50) 
+                         matrix(0.3, 0.5, -0.5, 0.4, 100, 200);
+   }
+   60% {
+      -webkit-transform: matrix(0.25,1.0,  1.5, 0.25, 0, 0) 
+                         matrix(2.0, 0.5, -0.5, 2.0, 0, 0);
+   }
+   80% {
+      -webkit-transform: matrix(1.5, 0.0,  0.0, 2.5, 0, 0) 
+                         matrix(0.8, 1.5,  1.0, 1.5, 0, 0);
+   }
+   85% {
+      -webkit-transform: matrix(1.4, 0.4,  0.0, 1.5, 0, 0) 
+                         matrix(1.0, 0.0,  1.0, 1.0, 0, 0);
+   }
+   90% {
+      -webkit-transform: matrix(2.0, 0.5,  1.0, 2.0, 0, 0) 
+                         matrix(1.5, 0.0,  0.5, 2.5, 0, 0);
+   }
+   95% {
+      -webkit-transform: translate3d(-50px,-50px,-50px) rotate3d(-50px,-50px,-50px, 120deg) skew(135deg,0) scale3d(0.3, 0.4, 0.5);
+   }
+   96% {
+      -webkit-transform: matrix(0.2, 0.3, -0.5, 0.5, 100, 200) 
+                         matrix(0.4, 0.5,  0.5, 0.2, 200, 50);
+   }
+   97% {
+      -webkit-transform: translate3d(50px,-50px,50px) rotate3d(-50px,50px,-50px, 120deg) skew(315deg,0) scale3d(0.5, 0.4, 0.3);
+   }
+   98% {
+      -webkit-transform: matrix(0.4, 0.5,  0.5, 0.3, 200, 50) 
+                         matrix(0.3, 0.5, -0.5, 0.4, 50, 150);
+   }
+   99% {
+      -webkit-transform: translate3d(150px,50px,50px) rotate3d(60px,80px,100px, 240deg) skew(315deg,0) scale3d(1.0, 0.7, 0.3);
+   }
+   100% {
+      -webkit-transform: matrix(1.0, 0.0,  0.0, 1.0, 0, 0)
+                         matrix(1.0, 0.5,  1.0, 1.5, 0, 0);
+   }
+}
+

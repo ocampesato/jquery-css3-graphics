@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <title>Lituus Rectangles</title>
+   <meta charset="utf-8" />
+   <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+   <style>
+     #outer {
+       position: absolute;
+       width: 90%; height: 90%;
+       border: solid 2px #000;
+     }
+
+     .radial2 {
+background-color:white;
+background-image:
+  -webkit-radial-gradient(red 18px, transparent 36px), 
+  -webkit-repeating-radial-gradient(red 0px,  green 4px, yellow 8px, blue 12px,
+                                    transparent 28px, green 20px, red 24px,
+                                    transparent 28px, transparent 12px),
+  -webkit-repeating-radial-gradient(red 0px,  green 4px, yellow 8px, blue 12px,
+                                    transparent 28px, green 20px, red 24px,
+                                    transparent 28px, transparent 12px);
+background-size: 50px 60px, 70px 80px;
+-webkit-box-shadow:  10px 10px 10px #000;
+
+resize:both;
+overflow:auto;
+     }
+    </style>
+  </head>
+
+  <body>
+    <div id="outer"> </div>
+
+    <script>
+      var fillRed = "rgb(255, 0, 0)", fillYellow = "rgb(255, 255, 0)";
+      var fillColor  = "rgb(255, 0, 0)";
+      var basePointX = 400, basePointY = 180;
+      var rectWidth = 200, rectHeight = 120;
+      var currentX  = 0, currentY = 0;
+      var deltaAngle = 3, maxAngle = 720;
+      var Constant = 200, newNode;
+      var rVal = 0, gVal = 0, bVal = 0; 
+      var stripCount = 10, currStrip = 0, factor = 1.0;
+      var stripWidth = Math.floor(maxAngle/stripCount);
+ 
+      $(document).ready(function() {
+         for(var angle=1; angle<maxAngle; angle++) {
+            radius   = Constant*Constant/angle;
+
+            offsetX  = radius*Math.cos(angle*Math.PI/180);
+            offsetY  = radius*Math.sin(angle*Math.PI/180);
+            currentX = basePointX+offsetX;
+            currentY = basePointY-offsetY;
+      
+            currStrip = Math.floor(angle/stripWidth);
+            if(currStrip % 2 == 0) {
+              factor = 2.0;
+            } else {
+              factor = 1.0;
+            }
+
+            rVal = Math.floor(255*(angle%stripWidth)/stripWidth);
+            fillColor  = "rgb("+rVal+", 0, 0)";
+ 
+            // create a rectangle at the current position
+            if(angle % 10 == 0) {
+            newNode = $('<div>').css({'position':'absolute',
+                                      'width':(factor*(angle%rectWidth))+'px',
+                                      'height':(factor*(angle%rectHeight))+'px',
+                                       left: currentX+'px',
+                                       top: currentY+'px',
+                                       'backgroundColor': fillColor,
+                                       'borderRadius': '20%'
+                                     }). 
+                                    toggleClass("radial2"); 
+            }
+ 
+            $("#outer").append(newNode);
+         }
+      });
+    </script>
+  </body>
+</html>
+

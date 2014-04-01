@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <title>Cochleoid Ellipses</title>
+   <meta charset="utf-8" />
+   <link href="SkewAnim1.css" rel="stylesheet" type="text/css">
+   <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+   <style>
+     #outer {
+       position: absolute;
+       width: 90%; height: 90%;
+       border: solid 2px #000;
+     }
+    </style>
+  </head>
+
+  <body>
+    <div id="outer"> </div>
+
+    <script>
+      var fillColor  = "rgb(255, 0, 0)";
+      var basePointX = 200, basePointY = 300;
+      var majorAxis = 200, minorAxis = 200;
+      var currentX  = 0, currentY = 0;
+      var deltaAngle = 3, maxAngle = 720;
+      var Constant = 20000.0, newNode;
+      var rVal = 0, gVal = 0, bVal = 0; 
+      var stripCount = 10, currStrip = 0, factor = 0.5;
+      var stripWidth = Math.floor(maxAngle/stripCount);
+ 
+      $(document).ready(function() {
+         for(var angle=1; angle<maxAngle; angle+=deltaAngle) {
+            radius   = Constant*Math.sin(angle*Math.PI/180)/angle;
+
+            offsetX  = radius*Math.cos(angle*Math.PI/180);
+            offsetY  = radius*Math.sin(angle*Math.PI/180);
+            currentX = basePointX+offsetX;
+            currentY = basePointY-offsetY;
+      
+            currStrip = Math.floor(angle/stripWidth);
+            if(currStrip % 2 == 0) {
+              factor = 1.0;
+            } else {
+              factor = 0.5;
+            }
+
+            rVal = 0; gVal = 0; bVal = 0; 
+            currStrip = Math.floor(angle/stripWidth);
+
+            if(currStrip % 3 == 0) {
+              rVal = Math.floor(255*(angle%stripWidth)/stripWidth);
+            } if(currStrip % 3 == 1) {
+              rVal = Math.floor(255*(angle%stripWidth)/stripWidth);
+              gVal = Math.floor(255*(angle%stripWidth)/stripWidth);
+            } 
+            else {
+              bVal = Math.floor(255*(angle%stripWidth)/stripWidth);
+            } 
+
+            fillColor  = "rgb("+rVal+","+gVal+","+bVal+")";
+ 
+            // create an ellipse at the current position
+            newNode = $('<div>').css({'position':'absolute',
+                                      'width':(factor*majorAxis)+'px',
+                                      'height':(factor*minorAxis)+'px',
+                                       left: currentX+'px',
+                                       top: currentY+'px',
+                                       'backgroundColor': fillColor,
+                                       'borderRadius': '50%'
+                                     }); 
+ 
+            $("#outer").append(newNode);
+ 
+            // create an ellipse at the current position
+            newNode = $('<div>').css({'position':'absolute',
+                                      'width':majorAxis+'px',
+                                      'height':minorAxis+'px',
+                                       left: (currentX+majorAxis)+'px',
+                                       top: currentY+'px',
+                                       'backgroundColor': fillColor,
+                                       'borderRadius': '40%'
+                                     }). 
+                                    addClass("skewAnim3"); 
+ 
+            if(Math.floor(angle/deltaAngle) % 12 == 0) {
+               $(newNode).addClass("skewAnim6");
+            } 
+ 
+            $("#outer").append(newNode);
+         }
+      });
+    </script>
+  </body>
+</html>

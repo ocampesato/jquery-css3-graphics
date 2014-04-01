@@ -1,0 +1,42 @@
+
+#myCanvas {
+position: relative; top: 0px; left: 0px; 
+
+background-color:white;
+background-image:
+  -webkit-radial-gradient(red 4px, transparent 48px), 
+  -webkit-repeating-linear-gradient(25deg, yellow 2px,  green 4px, yellow 8px, blue 12px, 
+                                    transparent 16px, blue 20px, red 24px, 
+                                    transparent 28px, transparent 32px),
+  -webkit-repeating-linear-gradient(-25deg, yellow 2px,  green 4px, yellow 8px, blue 12px, 
+                                    transparent 16px, blue 20px, red 24px, 
+                                    transparent 28px, transparent 32px),
+  -webkit-radial-gradient(blue 8px, transparent 68px);
+
+background-size: 40px 40px, 8px 8px; 
+background-position: 0 0;
+-webkit-box-shadow:  30px 30px 30px #000;
+}
+
+#myCanvas:hover {
+position: relative; top: 0px; left: 0px;
+
+background-color:white;
+background-image:
+  -webkit-radial-gradient(blue 8px, red 20px, transparent 2px), 
+  -webkit-repeating-linear-gradient(45deg, red 3px,  yellow 5px, green 8px, red 12px, 
+                                    transparent 16px, blue 20px, red 24px, 
+                                    transparent 18px, blue 12px),
+  -webkit-repeating-linear-gradient(-45deg, red 3px,  yellow 4px, green 8px, red 12px, 
+                                    transparent 16px, blue 20px, red 24px, 
+                                    transparent 18px, blue 12px),
+  -webkit-radial-gradient(black 28px, transparent 18px); 
+background-size: 50px 20px, 30px 50px; 
+background-position: 0 0;
+
+-webkit-border-radius: 4px;
+border-radius: 4px;
+resize:both;
+overflow:auto;
+}
+

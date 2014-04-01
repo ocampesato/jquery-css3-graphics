@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <title>Conchoid Ellipses</title>
+   <meta charset="utf-8" />
+   <link href="SkewAnim1.css" rel="stylesheet" type="text/css">
+   <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+   <style>
+     #outer {
+       position: absolute;
+       width: 90%; height: 90%;
+       border: solid 2px #000;
+     }
+    </style>
+  </head>
+
+  <body>
+    <div id="outer"> </div>
+
+    <script>
+      var fillRed = "rgb(255, 0, 0)", fillYellow = "rgb(255, 255, 0)";
+      var fillColor  = "rgb(255, 0, 0)";
+      var basePointX = 200, basePointY = 170;
+      var majorAxis = 180, minorAxis = 80;
+      var currentX  = 0, currentY = 0;
+      var deltaAngle = 3, maxAngle = 720;
+      var Constant1 = 120.0, Constant2 = 80.0;
+      var denominator = 0.0, newNode;
+ 
+      $(document).ready(function() {
+         for(var angle=0; angle<maxAngle; angle+=deltaAngle) {
+            denominator = Math.cos(angle*Math.PI/180);
+            if(denominator == 0.0) { denominator = 1; }
+            radius  = Constant1+Constant2/denominator;
+
+            offsetX  = radius*Math.cos(angle*Math.PI/180);
+            offsetY  = radius*Math.sin(angle*Math.PI/180);
+            currentX = basePointX+offsetX;
+            currentY = basePointY-offsetY;
+      
+            if(Math.floor(angle/deltaAngle) % 2 == 0) {
+               fillColor = fillRed;
+            } else {
+               fillColor = fillYellow;
+            }     
+ 
+            // create an ellipse at the current position
+            newNode = $('<div>').css({'position':'absolute',
+                                      'width':(angle%majorAxis)+'px',
+                                      'height':(angle%minorAxis)+'px',
+                                       left: currentX+'px',
+                                       top: currentY+'px',
+                                       'backgroundColor': fillColor,
+                                       'borderRadius': '50%'
+                                     }); 
+ 
+            $("#outer").append(newNode);
+ 
+            // create an ellipse at the current position
+            newNode = $('<div>').css({'position':'absolute',
+                                      'width':majorAxis+'px',
+                                      'height':minorAxis+'px',
+                                       left: (currentX+majorAxis)+'px',
+                                       top: currentY+'px',
+                                       'backgroundColor': fillColor,
+                                       'borderRadius': '50%'
+                                     }); 
+ 
+            $("#outer").append(newNode);
+ 
+            // create an ellipse at the current position
+            newNode = $('<div>').css({'position':'absolute',
+                                      'width':majorAxis+'px',
+                                      'height':minorAxis+'px',
+                                       left: (currentX+majorAxis/2)+'px',
+                                       top: (currentY-minorAxis/2)+'px',
+                                       'backgroundColor': fillColor,
+                                       'borderRadius': '50%'
+                                     }). 
+                                    addClass("skewAnim2"); 
+ 
+            if(Math.floor(angle/deltaAngle) % 12 == 0) {
+               $(newNode).addClass("skewAnim7");
+            } 
+ 
+            $("#outer").append(newNode);
+         }
+      });
+    </script>
+  </body>
+</html>
+

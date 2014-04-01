@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <title>Lissajous Ellipses</title>
+   <meta charset="utf-8" />
+   <link href="SkewAnim1.css" rel="stylesheet" type="text/css">
+   <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+   <style>
+     #outer {
+       position: absolute;
+       width: 90%; height: 90%;
+       border: solid 2px #000;
+     }
+
+     .rotate1 {
+      -webkit-transform : scale(0.75, 1.75) rotate(-60deg);
+      -transform : scale(0.75, 1.75) rotate(-60deg);
+     -webkit-box-shadow: 3px 1px 1px #00f;
+      box-shadow: 2px 1px 1px #00f;
+     }
+
+     .rotate2 {
+      -webkit-transform : scale(1.5, 0.5) rotate(50deg);
+      -transform : scale(1.5, 0.5) rotate(50deg);
+     -webkit-box-shadow: 3px 3px 3px #000;
+      box-shadow: 3px 3px 3px #000;
+     }
+    </style>
+  </head>
+
+  <body>
+    <div id="outer"> </div>
+
+    <script>
+      var fillRed = "rgb(255, 0, 0)", fillYellow = "rgb(255, 255, 0)";
+      var fillColor  = "rgb(255, 0, 0)";
+      var basePointX = 200, basePointY = 230;
+      var majorAxis = 120, minorAxis = 60;
+      var currentX  = 0, currentY = 0;
+      var deltaAngle = 3, maxAngle = 720;
+      var Constant = 0.25, newNode, addClass;
+      var A = 200.0, B = 2.0, C = 100.0, D = 5.0;
+      var offsetX = 0, offsetY = 0;
+ 
+      $(document).ready(function() {
+         for(var angle=0; angle<maxAngle; angle+=deltaAngle) {
+            offsetX  = A*Math.sin(B*angle*Math.PI/180);
+            offsetY  = C*Math.cos(D*angle*Math.PI/180);
+
+            currentX = basePointX+offsetX;
+            currentY = basePointY-offsetY;
+      
+            if(Math.floor(angle/deltaAngle) % 2 == 0) {
+               addClass = "rotate2";
+               fillColor = fillRed;
+            } else {
+               fillColor = fillYellow;
+               addClass = "rotate1";
+            }     
+ 
+            // create an ellipse at the current position
+            newNode = $('<div>').css({'position':'absolute',
+                                      'width':(angle%majorAxis)+'px',
+                                      'height':(angle%minorAxis)+'px',
+                                       left: currentX+'px',
+                                       top: currentY+'px',
+                                       'backgroundColor': fillColor,
+                                       'borderRadius': '50%'
+                                     }).
+                                  toggleClass("rotate2"); 
+                                //toggleClass(addClass); 
+ 
+            $("#outer").append(newNode);
+ 
+            // create an ellipse at the current position
+            newNode = $('<div>').css({'position':'absolute',
+                                      'width':majorAxis+'px',
+                                      'height':minorAxis+'px',
+                                       left: (currentX+majorAxis)+'px',
+                                       top: currentY+'px',
+                                       'backgroundColor': fillColor,
+                                       'borderRadius': '50%'
+                                     }). 
+                                    addClass("rotate2 skewAnim2"); 
+ 
+            $("#outer").append(newNode);
+ 
+            // create an ellipse at the current position
+            newNode = $('<div>').css({'position':'absolute',
+                                      'width':majorAxis+'px',
+                                      'height':minorAxis+'px',
+                                       left: (currentX+majorAxis/2)+'px',
+                                       top: (currentY-minorAxis/2)+'px',
+                                       'backgroundColor': fillColor,
+                                       'borderRadius': '50%'
+                                     }).
+                                  toggleClass(addClass); 
+ 
+            if(Math.floor(angle/deltaAngle) % 5 == 0) {
+               $(newNode).addClass("skewAnim9");
+            } 
+
+            $("#outer").append(newNode);
+         }
+      });
+    </script>
+  </body>
+</html>
+
